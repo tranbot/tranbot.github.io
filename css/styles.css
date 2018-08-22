@@ -64,6 +64,10 @@ html {
     cursor: pointer;
 }
 
+.w3-bar {
+    background-color: rgba(0,0,0,0.2);
+}
+
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1,
     .bgimg-2,
@@ -71,4 +75,8 @@ html {
     .bgimg-4 {
         background-attachment: scroll;
     }
+}
+
+.w3-button {
+    background-color: transparent !important;
 }
