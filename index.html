@@ -3,16 +3,16 @@
 <title>Hướng Dương | TNTT</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-<link rel="stylesheet" href="./css/styles.css">
-
 <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
     <link rel='stylesheet' href='./js/fullcalendar.css' />
     <!-- <link rel='stylesheet' href='./css/_materialFullCalendar.css' /> -->
@@ -20,51 +20,6 @@
     <script src='./js/lib/moment.min.js'></script>
     <script src='./js/fullcalendar.js'></script>
     <script type='text/javascript' src='./js/gcal.js'></script>
-
-    <script type='text/javascript'>
-
-
-        // $(function () {
-        //     $('#calendar').fullCalendar({
-        //         googleCalendarApiKey: 'AIzaSyAmxvaKLLlesn2ehjcFti33sOsHZghSqt8',
-        //         events: {
-        //             googleCalendarId: '54q9ta0da7716nv325uer1ftn8@group.calendar.google.com',
-        //             className: 'gcal-event' // an option!
-        //         },
-        //         header: {
-        //             left: 'title',
-        //             center: 'agendaDay,agendaWeek,month',
-        //             right: 'prev,next today'
-        //         },
-        //         firstDay: 1,
-
-
-        //         editable: false, // Don't allow editing of events
-        //         handleWindowResize: true,
-        //         // weekends: true, // Hide weekends
-        //         defaultView: 'agendaWeek', // Only show week view
-        //         // // header: false, // Hide buttons/titles
-        //         minTime: '07:30:00', // Start time for the calendar
-        //         maxTime: '24:00:00', // End time for the calendar
-
-        //         displayEventTime: true, // Display event time
-        //         header: {
-        //             left: 'title',
-        //             center: 'agendaDay,agendaWeek,month',
-        //             right: 'prev,next today'
-        //         },
-        //         editable: false,
-        //         firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
-        //         selectable: true,
-        //         defaultView: 'month',
-
-        //         axisFormat: 'h:mm',
-
-        //         allDaySlot: false,
-        //     });
-        // });
-
-    </script>
     <style>
         body,
         h1,
@@ -138,10 +93,7 @@
             }
         }
     </style>
-
-
-</head>
-
+    </head>
 <body>
 
     <!-- Navbar (sit on top) -->
@@ -462,7 +414,7 @@
 
     <!-- Add Google Maps -->
     <script>
-               $(function () {
+        $(function () {
             $('#calendar').fullCalendar({
                 googleCalendarApiKey: 'AIzaSyAmxvaKLLlesn2ehjcFti33sOsHZghSqt8',
                 events: {
@@ -544,7 +496,7 @@
                 x.className = x.className.replace(" w3-show", "");
             }
         }
-        $(document).ready(function(){
+        $(document).ready(function () {
             $(".fc-left").addClass("col-md-4");
             $(".fc-center").addClass("col-md-4");
             $(".fc-right").addClass("col-md-4");
