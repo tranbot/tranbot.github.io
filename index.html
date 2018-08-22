@@ -9,83 +9,115 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
 <link rel="stylesheet" href="./css/styles.css">
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Lato", sans-serif;
-    }
-
-    body,
-    html {
-        height: 100%;
-        color: #777;
-        line-height: 1.8;
-    }
-
-    /* Create a Parallax Effect */
-
-    .bgimg-1,
-    .bgimg-2,
-    .bgimg-3,
-    .bgimg-4 {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    /* First image (Logo. Full height) */
-
-    .bgimg-1 {
-        background-image: url('./img/HD-198.jpg');
-        min-height: 100%;
-    }
-
-    /* Second image (Portfolio) */
-
-    .bgimg-2 {
-        background-image: url("./img/bkgrnd-2.jpg");
-        min-height: 400px;
-    }
-
-    /* Third image (Contact) */
-
-    .bgimg-3 {
-        background-image: url("./img/bkgrnd-3.gif");
-        min-height: 400px;
-    }
-
-    .bgimg-4 {
-        background-image: url("./img/bkgrnd-4.jpg");
-        min-height: 400px;
-    }
-
-    .w3-wide {
-        letter-spacing: 10px;
-    }
-
-    .w3-hover-opacity {
-        cursor: pointer;
-    }
-
-    /* Turn off parallax scrolling for tablets and phones */
-
-    @media only screen and (max-device-width: 1024px) {
-        .bgimg-1,
-        .bgimg-2,
-        .bgimg-3 {
-            background-attachment: scroll;
-        }
-    }
-</style>
 
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel='stylesheet' href='js/fullcalendar.css' />
+    <script src='js/lib/jquery.min.js'></script>
+    <script src='js/lib/moment.min.js'></script>
+    <script src='js/fullcalendar.js'></script>
+    <script type='text/javascript' src='js/gcal.js'></script>
+
+    <script type='text/javascript'>
+
+        $(function() {
+          $('#calendar').fullCalendar({
+            googleCalendarApiKey: 'AIzaSyAmxvaKLLlesn2ehjcFti33sOsHZghSqt8',
+            events: {
+              googleCalendarId: '54q9ta0da7716nv325uer1ftn8@group.calendar.google.com',
+            //   className: 'gcal-event' // an option!
+            },
+            header: {
+				left: 'title',
+				center: 'agendaDay,agendaWeek,month',
+				right: 'prev,next today'
+            },
+            firstDay: 1,
+            defaultView: 'month',
+            editable: false,
+            selectable: true,
+          });
+        });
+        
+        </script>    
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            color: #777;
+            line-height: 1.8;
+        }
+
+        /* Create a Parallax Effect */
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3,
+        .bgimg-4 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* First image (Logo. Full height) */
+
+        .bgimg-1 {
+            background-image: url('./img/HD-198.jpg');
+            min-height: 100%;
+        }
+
+        /* Second image (Portfolio) */
+
+        .bgimg-2 {
+            background-image: url("./img/bkgrnd-2.jpg");
+            min-height: 400px;
+        }
+
+        /* Third image (Contact) */
+
+        .bgimg-3 {
+            background-image: url("./img/bkgrnd-3.gif");
+            min-height: 400px;
+        }
+
+        .bgimg-4 {
+            background-image: url("./img/bkgrnd-4.jpg");
+            min-height: 400px;
+        }
+
+        .w3-wide {
+            letter-spacing: 10px;
+        }
+
+        .w3-hover-opacity {
+            cursor: pointer;
+        }
+
+
+        /* Turn off parallax scrolling for tablets and phones */
+
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3,
+            .bgimg-4 {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -252,21 +284,25 @@
 
     <!-- Second Parallax Image with Portfolio Text -->
     <div class="bgimg-4 w3-display-container w3-opacity-min" id="events">
-            <div class="w3-display-middle">
-                <span class="w3-xxlarge w3-text-white w3-wide">EVENTS</span>
-            </div>
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">EVENTS</span>
         </div>
-    
-        <!-- Container (Portfolio Section) -->
-        <div class="w3-content w3-container w3-padding-64">
-            <h3 class="w3-center">OUR EVENTS</h3>
-            <p class="w3-center">
-                <em>Here are some of my latest lorem work ipsum tipsum.
-                    <iframe src="https://calendar.google.com/calendar/b/2/embed?showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=john%40tntt.org&amp;color=%231B887A&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-            </p>
-            <br>
-    
-        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">OUR EVENTS</h3>
+        <p class="w3-center">
+            <!-- <div id="cal_body">
+                <div id='calendar'></div>
+
+                <div style='clear:both'></div> -->
+            <div id='calendar'></div>
+    </div>
+    </p>
+    <br>
+
+    </div>
 
     <!-- Third Parallax Image with Portfolio Text -->
     <div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
