@@ -13,33 +13,58 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel='stylesheet' href='js/fullcalendar.css' />
+    <link rel='stylesheet' href='css/_materialFullCalendar.css' />
     <script src='js/lib/jquery.min.js'></script>
     <script src='js/lib/moment.min.js'></script>
+    <script src='js/jquery/jquery-1.10.2.js'></script>
+    <script src='js/jquery/jquery-ui.custom.min.js'></script>
     <script src='js/fullcalendar.js'></script>
     <script type='text/javascript' src='js/gcal.js'></script>
 
     <script type='text/javascript'>
 
-        $(function() {
-          $('#calendar').fullCalendar({
-            googleCalendarApiKey: 'AIzaSyAmxvaKLLlesn2ehjcFti33sOsHZghSqt8',
-            events: {
-              googleCalendarId: '54q9ta0da7716nv325uer1ftn8@group.calendar.google.com',
-            //   className: 'gcal-event' // an option!
-            },
-            header: {
-				left: 'title',
-				center: 'agendaDay,agendaWeek,month',
-				right: 'prev,next today'
-            },
-            firstDay: 1,
-            defaultView: 'month',
-            editable: false,
-            selectable: true,
-          });
+
+        $(function () {
+            $('#calendar').fullCalendar({
+                googleCalendarApiKey: 'AIzaSyAmxvaKLLlesn2ehjcFti33sOsHZghSqt8',
+                events: {
+                    googleCalendarId: '54q9ta0da7716nv325uer1ftn8@group.calendar.google.com',
+                    className: 'gcal-event' // an option!
+                },
+                header: {
+                    left: 'title',
+                    center: 'agendaDay,agendaWeek,month',
+                    right: 'prev,next today'
+                },
+                firstDay: 1,
+
+
+                editable: false, // Don't allow editing of events
+                handleWindowResize: true,
+                // weekends: true, // Hide weekends
+                defaultView: 'agendaWeek', // Only show week view
+                // // header: false, // Hide buttons/titles
+                minTime: '07:30:00', // Start time for the calendar
+                maxTime: '24:00:00', // End time for the calendar
+
+                displayEventTime: true, // Display event time
+                header: {
+                    left: 'title',
+                    center: 'agendaDay,agendaWeek,month',
+                    right: 'prev,next today'
+                },
+                editable: true,
+                firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
+                selectable: true,
+                defaultView: 'month',
+
+                axisFormat: 'h:mm',
+
+                allDaySlot: false,
+            });
         });
-        
-        </script>    
+
+    </script>
     <style>
         body,
         h1,
@@ -104,6 +129,61 @@
             cursor: pointer;
         }
 
+        #calbody {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            font-family: "Helvetica Nueue", Arial, Verdana, sans-serif;
+            background-color: #DDDDDD;
+        }
+
+        #wrap {
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        #external-events {
+            float: left;
+            width: 150px;
+            padding: 0 10px;
+            text-align: left;
+        }
+
+        #external-events h4 {
+            font-size: 16px;
+            margin-top: 0;
+            padding-top: 1em;
+        }
+
+        .external-event {
+            /* try to mimick the look of a real event */
+            margin: 10px 0;
+            padding: 2px 4px;
+            background: #3366CC;
+            color: #fff;
+            font-size: .85em;
+            cursor: pointer;
+        }
+
+        #external-events p {
+            margin: 1.5em 0;
+            font-size: 11px;
+            color: #666;
+        }
+
+        #external-events p input {
+            margin: 0;
+            vertical-align: middle;
+        }
+
+        #calendar {
+            /* 		float: right; */
+            margin: 0 auto;
+            /* width: 900px; */
+            background-color: #FFFFFF;
+            /* border-radius: 6px; */
+            /* box-shadow: 0 1px 2px #C3C3C3; */
+        }
 
         /* Turn off parallax scrolling for tablets and phones */
 
@@ -297,7 +377,10 @@
                 <div id='calendar'></div>
 
                 <div style='clear:both'></div> -->
-            <div id='calendar'></div>
+            <div id="calbody">
+                <div id='calendar'></div>
+            </div>
+
     </div>
     </p>
     <br>
