@@ -1,51 +1,351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>Hướng Dương | TNTT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mr. Nguyen</title>
-</head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel='stylesheet' href='./js/fullcalendar.css' />
+    <!-- <link rel='stylesheet' href='./css/_materialFullCalendar.css' /> -->
+    <script src='./js/lib/jquery.min.js'></script>
+    <script src='./js/lib/moment.min.js'></script>
+    <script src='./js/fullcalendar.js'></script>
+    <script type='text/javascript' src='./js/gcal.js'></script>
+    </head>
 <body>
-    <h1>hello world</h1>
-    <p>
-        this is anh James
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()"
+                title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">
+                <i class="fas fa-home"></i> HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-user"></i> ABOUT</a>
+            <a href="#events" class="w3-bar-item w3-button w3-hide-small">
+                <i class="far fa-calendar-check"></i> EVENTS</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-th"></i> PHOTOS</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#events" class="w3-bar-item w3-button" onclick="toggleFunction()">EVENTS</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PHOTOS</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap; padding-bottom:10%; padding-left:7%;">
+            <img class="w3-center w3-animate-opacity" src="img/hdflogo_color.png" height=85% width=85% id="logo">
+        </div>
+
+        <div class="w3-display-middle" style="white-space:nowrap; padding-top:10%;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">HƯỚNG
+                <span class="w3-hide-small">DƯƠNG</span> FAMILY</span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT US</h3>
+        <p class="w3-center">
+            <em>We Are Hướng Dương Family!</em>
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="w3-xlarge w3-center ">BCH Đoàn</p>
+        <!-- Hide this text on small devices -->
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p>
+                    <b>
+                        <i class="fa fa-user w3-margin-right"></i>Cha Tuyên Úy</b>
+                    <p>Cha Christopher Nguyễn</p>
+                </p>
+                <br>
+                <img src="./img/chachris.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="50%" height="50%">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p>
+                    <b>
+                        <i class="fa fa-user w3-margin-right"></i>Đoàn Trưởng</b>
+                    <p>Mitchell Phạm</p>
+                </p>
+                <br>
+                <img src="./img/mitch.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="50%" height="50%">
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p>
+                    <b>
+                        <i class="fa fa-user w3-margin-right"></i>Đoàn Phó Quản Trị</b>
+                    <p>Lọc Nguyễn</p>
+                </p>
+                <br>
+                <img src="./img/loc.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="50%" height="50%">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="w3-col m6 w3-center w3-padding-large">
+
+                <p>
+                    <b>
+                        <i class="fa fa-user w3-margin-right"></i>Đoàn Phó Nghiên Huấn</b>
+                    <p>Jason Nguyen</p>
+                </p>
+                <br>
+                <img src="./img/aj.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="50%" height="50%">
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">14+</span>
+            <br> Partners
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">55+</span>
+            <br> Projects Done
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">89+</span>
+            <br> Happy Clients
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">150+</span>
+            <br> Meetings
+        </div>
+    </div> -->
+
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-4 w3-display-container w3-opacity-min" id="events">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">EVENTS</span>
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">OUR EVENTS</h3>
+        <p class="w3-center">
+            <!-- <div id="cal_body">
+                <div id='calendar'></div>
+
+                <div style='clear:both'></div> -->
+            <div id="calbody">
+                <div id='calendar'></div>
+            </div>
+    </div>
     </p>
-    <img src ="http://tny.im/eIt" style="width: 50%; height: 50%">
-    <div class="row1">
-        <div class="col">1.1</div>
-        <div class="col">1.2</div>
-        <div class="col">1.3</div>
-        <div class="col">1.4</div>
-        <div class="col">1.5</div>
+    <br>
+
     </div>
-    <div class="row2">
-        <div class="col">2.1</div>
-        <div class="col">2.2</div>
-        <div class="col">2.3</div>
-        <div class="col">2.4</div>
-        <div class="col">2.5</div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">PHOTOS</span>
+        </div>
     </div>
-    <div class="row3">
-        <div class="col">3.1</div>
-        <div class="col">3.2</div>
-        <div class="col">3.3</div>
-        <div class="col">3.4</div>
-        <div class="col">3.5</div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">MY WORK</h3>
+        <p class="w3-center">
+            <em>Here are some of my latest lorem work ipsum tipsum.
+                <br> Click on the images to make them bigger</em>
+        </p>
+        <br>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+            </div>
+            <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+        </div>
     </div>
-    <div class="row4">
-        <div class="col">4.1</div>
-        <div class="col">4.2</div>
-        <div class="col">4.3</div>
-        <div class="col">4.4</div>
-        <div class="col">4.5</div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image">
+            <i class="fa fa-remove"></i>
+        </span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
     </div>
-    <div class="row5">
-        <div class="col">5.1</div>
-        <div class="col">5.2</div>
-        <div class="col">5.3</div>
-        <div class="col">5.4</div>
-        <div class="col">5.5</div>
+
+    <!-- Fourth Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div>
     </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">WHERE I WORK</h3>
+        <p class="w3-center">
+            <em>I'd love your feedback!</em>
+        </p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <!-- Add Google Maps -->
+                <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US
+                    <br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515
+                    <br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com
+                    <br>
+                </div>
+                <p>Swing by for a cup of
+                    <i class="fa fa-coffee"></i>, or leave me a note:</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey">
+            <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Powered by
+            <a href="https://www.veym.net" title="W3.CSS" target="_blank" class="w3-hover-text-green">the Eucharist</a>
+        </p>
+    </footer>
+
+    <!-- Add Google Maps -->
+    <script src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+    <!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
 </body>
+
 </html>
